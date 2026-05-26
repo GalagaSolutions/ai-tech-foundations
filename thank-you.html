@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome! Your Course is Ready | One Solution</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2f6bff;
+      --secondary: #8c5cf5;
+      --accent: #8cb4ff;
+      --bg: #0a0f1f;
+      --bg2: #0d1528;
+      --text: #e8ecf4;
+      --text-dim: #9ba3b4;
+      --success: #22c55e;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+    .container { max-width: 640px; width: 100%; text-align: center; }
+    .success-badge {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--success), #16a34a);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+      font-size: 2.5rem;
+      animation: scaleIn 0.5s ease;
+    }
+    @keyframes scaleIn {
+      from { transform: scale(0); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+    .sub {
+      color: var(--text-dim);
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+    .next-steps {
+      background: var(--bg2);
+      border: 1px solid rgba(140, 180, 255, 0.1);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    .next-steps h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .step:last-child { margin-bottom: 0; }
+    .step-num {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .step-text h4 {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .step-text p {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 16px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.1rem;
+      transition: transform 0.2s;
+    }
+    .cta-btn:hover { transform: translateY(-2px); }
+    .guarantee {
+      margin-top: 24px;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+    footer {
+      margin-top: 48px;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="success-badge">✓</div>
+    <h1>You're In! Welcome to the Course.</h1>
+    <p class="sub">Your purchase is confirmed. Here's what to do next.</p>
+
+    <div class="next-steps">
+      <h3>Your Next 3 Steps</h3>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h4>Check Your Email</h4>
+          <p>Login details and your course access link are on their way to your inbox.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h4>Log Into the Academy</h4>
+          <p>Head to academy.onesolutionapp.com and sign in with the credentials from your email.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h4>Start Module 1</h4>
+          <p>Jump into Module 1: AI Fundamentals. It's the foundation everything else builds on.</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://academy.onesolutionapp.com" class="cta-btn">Go to the Academy →</a>
+    <p class="guarantee">Questions? Email support@onesolutionapp.com</p>
+
+    <footer>
+      <p>© 2026 One Solution LLC</p>
+    </footer>
+  </div>
+</body>
+</html>

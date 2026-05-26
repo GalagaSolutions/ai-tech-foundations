@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 4: AI for Sales & Follow-Up | One Solution</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2f6bff;
+      --secondary: #8c5cf5;
+      --accent: #8cb4ff;
+      --bg: #0a0f1f;
+      --bg2: #0d1528;
+      --text: #e8ecf4;
+      --text-dim: #9ba3b4;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+    nav {
+      background: rgba(10, 15, 31, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(140, 180, 255, 0.1);
+      padding: 16px 0;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-text { display: flex; flex-direction: column; }
+    .logo-top { font-size: 0.95rem; font-weight: 900; color: #fff; }
+    .logo-bottom { font-size: 0.65rem; font-weight: 600; color: var(--accent); text-transform: uppercase; }
+    .back-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      padding: 40px 0;
+      text-align: center;
+    }
+    .module-label {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+    .desc {
+      color: var(--text-dim);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .video-placeholder {
+      background: var(--bg2);
+      border: 2px dashed rgba(140, 180, 255, 0.2);
+      border-radius: 16px;
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 32px 0;
+      color: var(--text-dim);
+      font-size: 1.1rem;
+    }
+
+    .content {
+      background: var(--bg2);
+      border: 1px solid rgba(140, 180, 255, 0.1);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+    .content h2 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .content ul {
+      list-style: none;
+      padding: 0;
+    }
+    .content li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(140, 180, 255, 0.08);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .content li:last-child { border-bottom: none; }
+    .content li::before {
+      content: '✓';
+      color: var(--primary);
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .nav-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 40px 0;
+    }
+    .nav-btn {
+      background: rgba(140, 180, 255, 0.1);
+      border: 1px solid rgba(140, 180, 255, 0.2);
+      color: var(--text);
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .nav-btn:hover {
+      background: rgba(47, 107, 255, 0.2);
+      border-color: rgba(47, 107, 255, 0.4);
+    }
+    .nav-btn.primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border: none;
+      color: #fff;
+    }
+    .nav-btn.primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(47, 107, 255, 0.3);
+    }
+
+    footer {
+      padding: 24px 0;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(140, 180, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/" class="logo-mark">
+          <div class="logo-icon">AI</div>
+          <div class="logo-text">
+            <span class="logo-top">AI & TECH FOUNDATIONS</span>
+            <span class="logo-bottom">by One Solution</span>
+          </div>
+        </a>
+        <a href="../members.html" class="back-link">← Member Area</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="hero">
+      <div class="module-label">Module 4</div>
+      <h1>AI for Sales & Follow-Up</h1>
+      <p class="desc">Never lose a lead again. Build automated nurture sequences that respond in minutes, not days.</p>
+    </div>
+
+    <div class="video-placeholder">
+      <span>📹 Video Player — 2 video(s)</span>
+    </div>
+
+    <div class="content">
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>The 5-minute follow-up rule and how to hit it every time</li>
+        <li>AI-powered lead scoring — focus on the right prospects</li>
+        <li>Automated nurture sequences that don't feel robotic</li>
+        <li>Closing more deals with AI-assisted sales conversations</li>
+      </ul>
+    </div>
+
+    <div class="nav-bottom">
+      <a href="module-3.html" class="nav-btn">← Previous</a>
+      <a href="module-5.html" class="nav-btn primary">Next Module →</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 One Solution LLC</p>
+    </div>
+  </footer>
+</body>
+</html>

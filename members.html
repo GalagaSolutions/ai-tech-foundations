@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member Area | AI & Technology Foundations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2f6bff;
+      --secondary: #8c5cf5;
+      --accent: #8cb4ff;
+      --bg: #0a0f1f;
+      --bg2: #0d1528;
+      --text: #e8ecf4;
+      --text-dim: #9ba3b4;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    nav {
+      background: rgba(10, 15, 31, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(140, 180, 255, 0.1);
+      padding: 16px 0;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-text { display: flex; flex-direction: column; }
+    .logo-top { font-size: 0.95rem; font-weight: 900; color: #fff; }
+    .logo-bottom { font-size: 0.65rem; font-weight: 600; color: var(--accent); text-transform: uppercase; }
+
+    .progress-bar {
+      background: rgba(140, 180, 255, 0.1);
+      border-radius: 100px;
+      height: 8px;
+      overflow: hidden;
+      margin: 40px 0 24px;
+    }
+    .progress-fill {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      height: 100%;
+      width: 0%;
+      border-radius: 100px;
+      transition: width 0.5s ease;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .welcome {
+      color: var(--text-dim);
+      margin-bottom: 40px;
+    }
+
+    .module-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .module-card {
+      background: var(--bg2);
+      border: 1px solid rgba(140, 180, 255, 0.1);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .module-card:hover {
+      transform: translateX(8px);
+      border-color: rgba(47, 107, 255, 0.3);
+    }
+    .module-num {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .module-info h3 {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .module-info p {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+    .module-status {
+      margin-left: auto;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+
+    .resources {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(140, 180, 255, 0.1);
+    }
+    .resources h2 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .resource-list {
+      display: grid;
+      gap: 12px;
+    }
+    .resource-item {
+      background: rgba(140, 180, 255, 0.05);
+      border: 1px solid rgba(140, 180, 255, 0.1);
+      border-radius: 8px;
+      padding: 16px 20px;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .resource-item:hover {
+      border-color: rgba(47, 107, 255, 0.3);
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 24px 0;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(140, 180, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/" class="logo-mark">
+          <div class="logo-icon">AI</div>
+          <div class="logo-text">
+            <span class="logo-top">AI & TECH FOUNDATIONS</span>
+            <span class="logo-bottom">by One Solution</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress"></div>
+    </div>
+    <h1>Welcome Back</h1>
+    <p class="welcome">Pick up where you left off. Complete all 6 modules to finish the course.</p>
+
+    <div class="module-grid">
+      <a href="modules/module-1.html" class="module-card">
+        <div class="module-num">1</div>
+        <div class="module-info">
+          <h3>AI Fundamentals for Business</h3>
+          <p>What AI is, what it can do, and how to cut through the hype.</p>
+        </div>
+        <span class="module-status">2 videos</span>
+      </a>
+      <a href="modules/module-2.html" class="module-card">
+        <div class="module-num">2</div>
+        <div class="module-info">
+          <h3>ChatGPT & AI Writing</h3>
+          <p>Write emails, proposals, and sales copy in minutes.</p>
+        </div>
+        <span class="module-status">2 videos</span>
+      </a>
+      <a href="modules/module-3.html" class="module-card">
+        <div class="module-num">3</div>
+        <div class="module-info">
+          <h3>CRM + Automation Setup</h3>
+          <p>Connect your CRM and automate tasks killing your time.</p>
+        </div>
+        <span class="module-status">2 videos</span>
+      </a>
+      <a href="modules/module-4.html" class="module-card">
+        <div class="module-num">4</div>
+        <div class="module-info">
+          <h3>AI for Sales & Follow-Up</h3>
+          <p>Never lose a lead again with automated nurture sequences.</p>
+        </div>
+        <span class="module-status">2 videos</span>
+      </a>
+      <a href="modules/module-5.html" class="module-card">
+        <div class="module-num">5</div>
+        <div class="module-info">
+          <h3>Building Your AI Tool Stack</h3>
+          <p>The exact tools to use and how to connect everything.</p>
+        </div>
+        <span class="module-status">2 videos</span>
+      </a>
+      <a href="modules/module-6.html" class="module-card">
+        <div class="module-num">6</div>
+        <div class="module-info">
+          <h3>Implementation Roadmap</h3>
+          <p>Your 30-day action plan and how to measure results.</p>
+        </div>
+        <span class="module-status">3 videos</span>
+      </a>
+    </div>
+
+    <div class="resources">
+      <h2>Resources</h2>
+      <div class="resource-list">
+        <a href="#" class="resource-item">📄 Prompt Library — Copy & paste prompts for your business</a>
+        <a href="#" class="resource-item">📊 Automation Checklist — What to automate first</a>
+        <a href="#" class="resource-item">🛠️ Tool Comparison Sheet — Free vs paid options</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 One Solution LLC</p>
+    </div>
+  </footer>
+</body>
+</html>

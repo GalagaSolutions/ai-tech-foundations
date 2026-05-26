@@ -17,5 +17,7 @@
     "isNew": true
   },
   "linkedAt": "2026-05-26",
-  "status": "ready"
+  "status": "deployed",
+  "salesPageUrl": "https://ai-tech-foundations.vercel.app",
+  "githubUrl": "https://github.com/GalagaSolutions/ai-tech-foundations"
 }
