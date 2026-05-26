@@ -1,0 +1,21 @@
+{
+  "projectName": "ai-tech-foundations",
+  "cleanedName": "ai-tech-foundations",
+  "productName": "AI & Technology Foundations for Small Business",
+  "github": {
+    "owner": "GalagaSolutions",
+    "repo": "ai-tech-foundations",
+    "fullName": "GalagaSolutions/ai-tech-foundations",
+    "visibility": "public",
+    "isOrganization": false,
+    "isNew": true
+  },
+  "vercel": {
+    "projectId": "prj_UldxILPR8ScZdipHeYKuaed1yZNK",
+    "projectName": "ai-tech-foundations",
+    "scope": "Gabe G",
+    "isNew": true
+  },
+  "linkedAt": "2026-05-26",
+  "status": "ready"
+}
