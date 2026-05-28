@@ -17,6 +17,8 @@
       --text-dim: #9ba3b4;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { width: 100%; overflow-x: hidden; }
+    body { width: 100%; max-width: 100%; overflow-x: hidden; }
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
@@ -25,7 +27,8 @@
       overflow-x: hidden;
     }
     img, svg, video, iframe { max-width: 100%; height: auto; }
-    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    svg, img { display: block; }
+    .container { width: 100%; max-width: 900px; margin: 0 auto; padding: 0 24px; }
 
     nav {
       background: rgba(10, 15, 31, 0.95);
